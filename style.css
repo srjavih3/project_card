@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 1440px;
+  height: 900px;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  background-color: hsl(233, 47%, 7%);
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  width: 80%;
+  background-color: hsl(244, 38%, 16%);
+  flex-flow: row nowrap;
+  border-radius: 8px;
+}
+
+/* Left container-item */
+
+.left {
+  padding: 30px;
+  padding-right: 50px;
+}
+
+.text-content {
+  padding: 24px 45px;
+}
+
+.left .text-content p {
+  color: hsla(0, 0%, 100%, 0.75);
+  /* background-color: red; */
+  line-height: 1.8;
+  letter-spacing: 0.8px;
+  text-wrap: pretty;
+}
+
+.left .text-content h1 {
+  font-size: 32px;
+  letter-spacing: 2.5px;
+  padding-bottom: 4px;
+  color: hsl(0, 0%, 100%);
+}
+
+.left .btn_sect {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
+  margin-top: 4px;
+  padding-left: 28px;
+  padding-bottom: 8px;
+  justify-content: space-around;
+  width: 85%;
+}
+
+.left .btn_sect .item {
+  padding: 8px;
+}
+
+.btn_sect .item h4 {
+  color: white;
+  text-align: justify;
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.btn_sect .item h4:last-of-type {
+  padding-left: 2.8px;
+}
+
+.btn_sect .item span {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 12.5px;
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.left .accent {
+  color: #aa5cdb;
+}
+
+/* Right container-item */
+
+.right {
+  padding-left: 50px;
+}
+
+.right .pict picture .photo {
+  filter: invert(24%) sepia(17%) saturate(1307%) hue-rotate(233deg)
+    brightness(80%) contrast(155%);
+  border-radius: 0px 8px 8px 0px;
+  height: 100%;
+}
+
+.right .pict {
+  height: 100%;
+}
+
+/* Media Query - Mobile Responsive */
+@media screen and (max-width: 425px) {
+  /* Body - HTML */
+  html,
+  body {
+    width: 375px;
+    height: 600px;
+    padding: 8px;
+  }
+
+  body {
+    font-size: 13px;
+  }
+
+  /* Container principal */
+  .container {
+    flex-flow: column-reverse nowrap;
+    width: 60%;
+    height: 95%;
+    padding-bottom: 12px;
+  }
+
+  /* Left container */
+
+  .left {
+    padding: 0 8px;
+    padding-top: 8px;
+  }
+
+  .text-content {
+    position: relative;
+    top: 20px;
+    padding: 12px;
+  }
+
+  .left .text-content p {
+    line-height: 2;
+    font-size: 8px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .left .text-content h1 {
+    font-size: 17px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .left .btn_sect {
+    position: relative;
+    top: 5px;
+    flex-flow: column wrap;
+    margin-top: 0.5px;
+    padding-bottom: 24px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left .btn_sect .item {
+    padding: 2px;
+  }
+
+  .btn_sect .item h4 {
+    font-size: 13px;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 3px;
+  }
+
+  .btn_sect .item h4:last-of-type {
+    padding-left: 0;
+  }
+
+  .btn_sect .item span {
+    font-size: 8.5px;
+    text-align: center;
+    letter-spacing: 0.7px;
+  }
+
+  /* Right container */
+
+  .right {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .right .pict picture .photo {
+    position: relative;
+    top: 22px;
+    border-radius: 8px 8px 0px 0px;
+    max-width: 100%;
+  }
+}
